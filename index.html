@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Disaster Information Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Disaster Information Aggregator</h1>
+    <nav>
+      <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="dashboard">
+    <h2>Real-Time Disaster Dashboard</h2>
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search disasters..." onkeyup="filterDisasters()">
+      <select id="category-filter" onchange="filterDisasters()">
+        <option value="">All Categories</option>
+        <option value="earthquake">Earthquake</option>
+        <option value="flood">Flood</option>
+        <option value="fire">Fire</option>
+        <option value="storm">Storm</option>
+      </select>
+    </div>
+    <div id="disaster-list">
+      <!-- Dynamic content will be added here -->
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>Disaster Map of India</h2>
+    <div id="map-container">
+      <img src="images/Disastermap.png" alt="Disaster Map of India" class="map-image">
+    </div>
+</section>
+
+
+  <section id="map">
+    <h2>Disaster Map</h2>
+    <div id="map-container">
+      <!-- Map will be displayed here -->
+    </div>
+  </section>
+
+  <section id="notifications">
+    <h2>Notifications</h2>
+    <div id="alert-box">
+      <!-- Real-time alerts will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 NDRF Disaster Information Aggregator</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
