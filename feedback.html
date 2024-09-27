@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Disaster Info Aggregator</title>
+    <link rel="stylesheet" href="reviewstyle.css">
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Feedback & Complaints</h2>
+
+        <form id="feedback-form" onsubmit="submitFeedback(event)">
+            <!-- Complaints Section -->
+            <div class="form-group">
+                <label for="complaint">Complaints</label>
+                <textarea id="complaint" name="complaint" rows="4" placeholder="Describe any issues you're facing" required></textarea>
+            </div>
+
+            <!-- Review Section -->
+            <div class="form-group">
+                <label for="review">Review</label>
+                <textarea id="review" name="review" rows="4" placeholder="Share your overall experience" required></textarea>
+            </div>
+
+            <!-- Rating Section -->
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <div class="rating">
+                    <span class="star" onclick="setRating(5)">★</span>
+                    <span class="star" onclick="setRating(4)">★</span>
+                    <span class="star" onclick="setRating(3)">★</span>
+                    <span class="star" onclick="setRating(2)">★</span>
+                    <span class="star" onclick="setRating(1)">★</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" value="0" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+
+            <!-- Message after form submission -->
+            <p id="feedback-message" class="feedback-message"></p>
+        </form>
+    </div>
+
+    <script src="reviewscript.js"></script>
+</body>
+</html>
